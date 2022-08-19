@@ -54,7 +54,34 @@ contract SimpleStorage {
     function addPerson(string memory _name, uint256 _favoriteNumber) public{
         people.push(People(_favoriteNumber, _name));
     }
+    
 
+ //calldata, memory, storage
+ 
+    //calldata and memory exist onlt for tempory during transaction
+    //storage can be used outside the function
+ 
+    //why we have given memory onlt ffor string because according to solidity string are hidden array 
+    // memory can we used for array ,struct or mapping so we have used for only strings not uint 
+    
+    
+    // function addPerson(string memory _name, uint256 _favoriteNumber) public{
+    //     people.push(People(_favoriteNumber, _name));
+    // }
+
+
+
+    //MAPPING
+    mapping(string => uint256) public nameToFavoriteNumber;
+
+ 
+    function addPerson(string memory _name, uint256 _favoriteNumber) public{
+        people.push(People(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name]= _favoriteNumber;
+    }
+
+  
+}
 
 
   
