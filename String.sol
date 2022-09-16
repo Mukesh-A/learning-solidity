@@ -13,4 +13,17 @@ contract _string{
         return name;
     }
 
+
+    //CONSTANT
+    //to not change value
+    //this can reduce gas fee
+
+        address public constant owneradd  = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+        address public  owneradds = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+        //now lets check the gas value after deloping of this two variables
+        // ownerdd = 21486 gas
+        // ownerdds =  23556 gas
+
+        // varaible2 has taken more gas fee ,so when its a constact value better to use constact
 }
